@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Médicos - Panel Admin</title>
+
+    <!-- <link rel="stylesheet" href="../styles/doctors.css"> -->
+</head>
+<body>
+
+    <header class="header">
+        <h1>Gestión de Médicos</h1>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home-admin.html">Inicio</a></li>
+                <li><a href="doctors.html" class="active">Médicos</a></li>
+                <li><a href="appointments.html">Turnos</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="../index.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+
+        <section class="add-section">
+            <h2>Agregar Médico</h2>
+
+            <form id="doctorForm">
+                <input type="text" id="name" placeholder="Nombre del médico" required>
+                <input type="text" id="specialty" placeholder="Especialidad" required>
+                <button type="submit">Agregar</button>
+            </form>
+
+            <p id="message"></p>
+        </section>
+
+        <section class="list-section">
+            <h2>Médicos Registrados</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Especialidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="doctorList">
+                    <!-- JS insertará médicos acá -->
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <!-- <script src="../scripts/doctors.js"></script> -->
+</body>
+</html>

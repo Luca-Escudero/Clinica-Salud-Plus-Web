@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedir Turno</title>
+</head>
+<body>
+
+    <header>
+        <h2>Solicitar un Turno</h2>
+    </header>
+
+    <div class="container">
+
+        <h3>Seleccionar opciones</h3>
+
+            <!-- Selección de médico (Será llenado con JS + MockAPI) -->
+    <label for="doctor">Médico:</label>
+    <select id="doctor">
+        <option value="">Cargando médicos...</option>
+    </select>
+
+        <!-- Fecha -->
+        <label for="date">Fecha:</label>
+        <input type="date" id="date">
+
+        <button onclick="loadAvailableHours()">Ver horarios disponibles</button>
+
+        <h3>Horarios disponibles</h3>
+
+        <div id="hours-container">
+            <!-- Aquí aparece la tabla de horarios -->
+        </div>
+
+    </div>
+
+</body>
+</html>
