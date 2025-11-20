@@ -3,7 +3,7 @@
   <!--begin::Head-->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Clínica Salud+ | Iniciar Sesión</title>
+    <title>Clínica Salud+ | Registrarme</title>
     <!--begin::Accessibility Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <meta name="color-scheme" content="light dark" />
@@ -11,11 +11,11 @@
     <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)" />
     <!--end::Accessibility Meta Tags-->
     <!--begin::Primary Meta Tags-->
-    <meta name="title" content="Clínica Salud+ | Registro para Turnos Médicos" />
+    <meta name="title" content="Clínica Salud+ | Inicio de Sesión para Turnos Médicos" />
     <meta name="author" content="Clínica Salud+" />
     <meta
       name="description"
-      content="Inicia sesión en el sistema de Clínica Salud+ para gestionar tus turnos médicos o acceder al panel de administración."
+      content="Registrate en el sistema de Clínica Salud+ para gestionar tus turnos médicos o acceder al panel de administración."
     />
     <meta
       name="keywords"
@@ -25,7 +25,7 @@
     <!--begin::Accessibility Features-->
     <!-- Skip links will be dynamically added by accessibility.js -->
     <meta name="supported-color-schemes" content="light dark" />
-    <link rel="preload" href="../css/adminlte.css" as="style" />
+    <link rel="preload" href="/css/adminlte.css" as="style" />
     <!--end::Accessibility Features-->
     <!--begin::Fonts-->
     <link
@@ -52,21 +52,25 @@
     />
     <!--end::Third Party Plugin(Bootstrap Icons)-->
     <!--begin::Required Plugin(AdminLTE)-->
-    <link rel="stylesheet" href="../css/adminlte.css" />
+    <link rel="stylesheet" href="/css/adminlte.css" />
     <!--end::Required Plugin(AdminLTE)-->
   </head>
   <!--end::Head-->
   <!--begin::Body-->
-  <body class="login-page bg-body-secondary">
-    <div class="login-box">
-      <div class="login-logo">
-        <a href="../index.html"><b>Clínica </b>Salud+</a>
+  <body class="register-page bg-body-secondary">
+    <div class="register-box">
+      <div class="register-logo">
+        <a href=".../index.html"><b>Clínica </b>Salud+</a>
       </div>
-      <!-- /.login-logo -->
+      <!-- /.register-logo -->
       <div class="card">
-        <div class="card-body login-card-body">
-          <p class="login-box-msg">Iniciá sesión para comenzar</p>
-          <form action="../index.html" method="post">
+        <div class="card-body register-card-body">
+          <p class="register-box-msg">Creá una cuenta como nuevo paciente</p>
+          <form action=".../index.html" method="post">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Nombre Completo" />
+              <div class="input-group-text"><span class="bi bi-person"></span></div>
+            </div>
             <div class="input-group mb-3">
               <input type="email" class="form-control" placeholder="Email" />
               <div class="input-group-text"><span class="bi bi-envelope"></span></div>
@@ -75,33 +79,23 @@
               <input type="password" class="form-control" placeholder="Contraseña" />
               <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
             </div>
-            <!--begin::Row-->
-            <div class="row">
-              <div class="col-8">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                  <label class="form-check-label" for="flexCheckDefault"> Recordarme </label>
-                </div>
-              </div>
               <!-- /.col -->
               <div class="col-4">
-                <div class="d-grid gap-2">
-                  <button type="submit" class="btn btn-primary">Ingresar</button>
+                <div class="d-grid gap-1">
+                  <button type="submit" class="btn btn-primary">Registrarme</button>
                 </div>
               </div>
               <!-- /.col -->
             </div>
             <!--end::Row-->
-          </form>
-          <p class="mb-0 text-center mt-3">
-            ¿No tenés cuenta? 
-            <a href="register.html" class="text-center"> Registrate acá </a>
-          </p>
+          <p class="mb-4 text-center mt-2">
+                <a href="login.html" class="text-center"> Ya tengo una cuenta </a>
+            </p>
         </div>
-        <!-- /.login-card-body -->
+        <!-- /.register-card-body -->
       </div>
     </div>
-    <!-- /.login-box -->
+    <!-- /.register-box -->
     <!--begin::Third Party Plugin(OverlayScrollbars)-->
     <script
       src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/browser/overlayscrollbars.browser.es6.min.js"
@@ -118,9 +112,8 @@
       crossorigin="anonymous"
     ></script>
     <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
-    <script src="../js/adminlte.js"></script>
-    
+    <script src="/js/adminlte.js"></script>
+    <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
   </body>
   <!--end::Body-->
 </html>
-
