@@ -1,4 +1,4 @@
-import { createUser, getAllUsers } from "../services/userServices.js"; 
+import { registerUser as createUser, getAllUsers, loginUser as serviceLogin } from "../services/usersService.js"; 
 
 const USUARIO_ROLE = "user";
 const ADMIN_ROLE = "admin";
@@ -38,7 +38,7 @@ export async function registerUser(nombre, email, password) {
     }
 
     try {
-        // Crea el nuevo usuario en MockAPI con rol de paciente
+        // Crea el nuevo usuario en la API con rol de paciente
         const newUser = await createUser({
             nombre,
             email,
@@ -58,6 +58,7 @@ export async function registerUser(nombre, email, password) {
 
 /**
  * Intenta iniciar sesión con el email y la contraseña.
+ * Usa el servicio usersService.loginUser que maneja fallback si hace falta.
  * @param {string} email 
  * @param {string} password 
  * @returns {object} El objeto de usuario autenticado.
@@ -67,50 +68,16 @@ export async function loginUser(email, password) {
         throw new Error("Email y contraseña son requeridos.");
     }
 
-    // Intento preferente: endpoint de autenticación (POST)
     try {
-        const res = await fetch('/api/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, password })
-        });
-
-        if (res.ok) {
-            const user = await res.json();
-            saveSession(user);
-            return user;
-        }
-
-        // Si el servidor responde 405, haremos fallback abajo
-        if (res.status !== 405) {
-            const err = await res.json().catch(() => ({}));
-            throw new Error(err.message || `Login falló (${res.status})`);
-        }
-
-        console.warn('/api/login devolvió 405, intentando fallback a getAllUsers()');
+        // Delegar la lógica de autenticación al servicio
+        const user = await serviceLogin({ email, password });
+        saveSession(user);
+        return user;
     } catch (err) {
-        // Si hubo error de red distinto a 405 dejamos que el fallback lo maneje o re-lanzamos si necesario
-        console.warn('Error al usar /api/login, intentaremos fallback:', err);
+        console.error("Error en loginUser (auth):", err);
+        // Normalizar mensaje para UI
+        throw new Error(err?.message || "Error al iniciar sesión. Intenta nuevamente.");
     }
-
-    // Fallback: obtener todos los usuarios y comparar (temporario, solo para desarrollo)
-    let users;
-    try {
-        users = await getAllUsers();
-    } catch (err) {
-        console.error("Error obteniendo usuarios en fallback:", err);
-        throw new Error("Error al obtener usuarios. Intenta nuevamente.");
-    }
-
-    const userList = Array.isArray(users) ? users : [];
-    const user = userList.find(u => u.email === email && u.password === password);
-
-    if (!user) {
-        throw new Error("Credenciales inválidas.");
-    }
-
-    saveSession(user);
-    return user;
 }
 
 /**
