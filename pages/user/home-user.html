@@ -35,7 +35,7 @@
           <li class="nav-item dropdown user-menu">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
               <img src="../assets/img/user2-160x160.jpg" class="user-image rounded-circle shadow"
-                alt="Imagen de Administrador" />
+                alt="Imagen de Usuario" />
               <span class="d-none d-md-inline">Usuario</span>
             </a>
 
@@ -50,8 +50,8 @@
 
               <li class="user-footer">
                 <div class="d-grid">
-                    <a href="#" class="btn btn-default btn-flat">Perfil</a>
-                  <a href="login.html" class="btn btn-danger w-100" id="logout-button-navbar">Cerrar Sesión</a>
+                    <a href="user-profile.html" class="btn btn-default btn-flat">Perfil</a>
+                  <a href="/pages/register-login/login.html" class="btn btn-danger w-100" id="logout-button">Cerrar Sesión</a>
                 </div>
               </li>
             </ul>
@@ -87,8 +87,8 @@
 
             <li class="nav-item">
               <a href="appointments-user.html" class="nav-link" data-content-id="appointments-view">
-                <i class="nav-icon bi bi-calendar-check"></i>
-                <p>Gestión de Citas</p>
+                <i class="bi bi-calendar-plus"></i>
+                <p>Nueva Cita</p>
               </a>
             </li>
 
@@ -108,7 +108,7 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-sm-6">
-              <h3 class="mb-0" id="main-title">Dashboard</h3>
+              <h3 class="mb-0" id="main-title">Dashboard del Paciente</h3>
             </div>
           </div>
         </div>
@@ -135,27 +135,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-3">
-              <div class="info-box text-bg-primary shadow-sm">
-                <span class="info-box-icon"><i class="bi bi-person-heart"></i></span>
-                <div class="info-box-content">
-                  <span class="info-box-text">Total de Doctores</span>
-                  <span class="info-box-number" id="metric-total-doctors">0</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3">
-              <div class="info-box text-bg-info shadow-sm">
-                <span class="info-box-icon"><i class="bi bi-person-fill"></i></span>
-                <div class="info-box-content">
-                  <span class="info-box-text">Total de Pacientes</span>
-                  <span class="info-box-number" id="metric-total-patients">0</span>
-                </div>
-              </div>
-            </div>
           </div>
           <div class="row mt-4">
-            <div class="col-md-5">
+            <div class="col-md-12">
               <div class="card mb-4">
                 <div class="card-header">
                   <h3 class="card-title">Estado de los Turnos</h3>
@@ -185,16 +167,6 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-7">
-              <div class="card">
-                <div class="card-header">
-                  <h3 class="card-title" id="content-table-title">Gestión de Doctores</h3>
-                </div>
-                <div class="card-body" id="main-content-table-body">
-                  <p class="text-muted"></p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -216,7 +188,7 @@
 
   <script src="/js/adminlte.js"></script>
 
-  <script type="module" src="/js/admin.js"></script>
+  <script type="module" src="/js/homeUser.js"></script>
 
 </body>
 

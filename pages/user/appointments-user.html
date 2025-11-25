@@ -12,7 +12,9 @@
     <link rel="preload" href="/css/adminlte.css" as="style" />
     <link rel="stylesheet" href="/css/adminlte.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40B7rT/P5wK/tL45jDAB5A9aU6W5jPz5KzFwA3X4wLhCqg0F2gT8k6/A7eB9/j6R6O2xKxO6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40B7rT/P5wK/tL45jDAB5A9aU6W5jPz5KzFwA3X4wLhCqg0F2gT8k6/A7eB9/j6R6O2xKxO6g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.css"
         integrity="sha256-4MX+61mt9NVvvuPjUWdUdyfZfxSB1/Rf9WtqRHgG5S0=" crossorigin="anonymous" />
@@ -50,8 +52,9 @@
 
                             <li class="user-footer">
                                 <div class="d-grid">
+                                    <a href="user-profile.html" class="btn btn-default btn-flat">Perfil</a>
                                     <a href="/pages/register-login/login.html" class="btn btn-danger w-100"
-                                        id="logout-button-navbar">Cerrar Sesión</a>
+                                        id="logout-button">Cerrar Sesión</a>
                                 </div>
                             </li>
                         </ul>
@@ -59,7 +62,7 @@
                 </ul>
             </div>
         </nav>
-        
+
         <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
             <div class="sidebar-brand">
                 <a href="/index.html" class="brand-link">
@@ -87,9 +90,10 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="appointments-user.html" class="nav-link active" data-content-id="appointments-view">
-                                <i class="nav-icon bi bi-calendar-check"></i>
-                                <p>Solicitar Cita</p>
+                            <a href="appointments-user.html" class="nav-link active"
+                                data-content-id="appointments-view">
+                                <i class="bi bi-calendar-plus"></i>
+                                <p>Nueva Cita</p>
                             </a>
                         </li>
 
@@ -103,7 +107,7 @@
                 </nav>
             </div>
         </aside>
-        
+
         <main class="app-main">
             <div class="app-content-header">
                 <div class="container-fluid">
@@ -152,12 +156,12 @@
         crossorigin="anonymous"></script>
 
     <script src="/js/adminlte.js"></script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.min.js"
         integrity="sha256-+vh8GkaU7C9/wbSLIcwq82tQ2wTf44aOHA8HlBMwRI8=" crossorigin="anonymous"></script>
 
     <script type="module" src="/js/appointments.js"></script>
-    
+
 </body>
 
 </html>
