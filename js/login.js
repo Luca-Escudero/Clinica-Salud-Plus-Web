@@ -1,4 +1,4 @@
-import { getUsers } from "./services/usersService.js";
+import { getAllUsers  } from "./services/usersService.js";
 
 const form = document.getElementById("loginForm");
 const emailInput = document.getElementById("email");
@@ -17,7 +17,7 @@ form.addEventListener("submit", async (e) => {
     }
 
     try {
-        const users = await getUsers();
+        const users = await getAllUsers ();
 
         // Buscar usuario en MockAPI
         const userFound = users.find(
