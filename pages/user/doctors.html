@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Clínica Salud+ | Panel de Administración</title>
+  <title>Clínica Salud+ | Doctores</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -38,8 +38,8 @@
           <li class="nav-item dropdown user-menu">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
               <img src="../assets/img/user2-160x160.jpg" class="user-image rounded-circle shadow"
-                alt="Imagen de Administrador" />
-              <span class="d-none d-md-inline">Administrador</span>
+                alt="Imagen de Usuario" />
+              <span class="d-none d-md-inline">Usuario</span>
             </a>
 
             <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
@@ -47,7 +47,7 @@
                 <img src="../assets/img/user2-160x160.jpg" class="rounded-circle shadow" alt="Imagen de Usuario"
                   style="width: 60px; height: 60px; margin-bottom: 5px;" />
                 <p class="mb-0">
-                  Administrador
+                  Usuario
                 </p>
               </li>
 
@@ -74,30 +74,30 @@
             aria-label="Main navigation" data-accordion="false" id="navigation">
 
             <li class="nav-item">
-              <a href="home-admin.html" class="nav-link " data-content-id="dashboard-view">
+              <a href="home-user.html" class="nav-link " data-content-id="dashboard-view">
                 <i class="nav-icon bi bi-speedometer2"></i>
                 <p>Dashboard</p>
               </a>
             </li>
 
             <li class="nav-item">
-              <a href="manage-doctors.html" class="nav-link active" data-content-id="doctors-view">
+              <a href="doctors.html" class="nav-link active" data-content-id="doctors-view">
                 <i class="nav-icon bi bi-person-badge-fill"></i>
-                <p>Gestión de Doctores</p>
+                <p>Doctores</p>
               </a>
             </li>
 
             <li class="nav-item">
-              <a href="appointments-admin.html" class="nav-link" data-content-id="appointments-view">
+              <a href="appointments-user.html" class="nav-link" data-content-id="appointments-view">
                 <i class="nav-icon bi bi-calendar-check"></i>
                 <p>Gestión de Citas</p>
               </a>
             </li>
 
             <li class="nav-item">
-              <a href="manage-user.html" class="nav-link" data-content-id="users-view">
-                <i class="nav-icon bi bi-people-fill"></i>
-                <p>Gestión de Pacientes</p>
+              <a href="my-appointments.html" class="nav-link" data-content-id="my-appointments-view">
+                <i class="nav-icon bi bi-calendar-check"></i>
+                <p>Mis Citas</p>
               </a>
             </li>
           </ul>
@@ -109,43 +109,36 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-sm-6">
-              <h3 class="mb-0" id="main-title">Gestión de Doctores</h3>
+              <h3 class="mb-0" id="main-title">Doctores Disponibles</h3>
             </div>
           </div>
         </div>
       </div>
       <div class="app-content">
-        <div class="container-fluid" id="admin-content-container">
+        <div class="container-fluid" id="user-content-container">
 
             <div class="card">
-    <div class="card-header">
-        <h3 class="card-title">Doctores</h3>
-        <div class="card-tools">
-            <button type="button" class="btn btn-primary btn-sm">
-                <i class="fas fa-plus"></i> Agregar Doctor
-            </button>
-        </div>
-    </div>
-    
-    <div class="card-body p-0">
-        <p class="text-muted p-3">Una lista de todos los doctores en tu clínica.</p>
-
-        <table class="table">
-            <thead>
-                <tr>
-                    <th style="width: 40%;">Nombre</th>
-                    <th style="width: 35%;">Especialidad</th>
-                    <th style="width: 25%;">Acciones</th> </tr>
-                </tr>
-            </thead>
-            <tbody id="doctorsTableBody">
+                <div class="card-header">
+                    <h3 class="card-title">Doctores</h3>
+                </div>
                 
-            </tbody>
-        </table>
-    </div>
-</div>
+                <div class="card-body p-0">
+                    <p class="text-muted p-3">Una lista de todos los doctores disponibles en tu clínica.</p>
 
-          
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Nombre</th>
+                                <th style="width: 35%;">Especialidad</th>
+                                <th style="width: 25%;">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="doctorsTableBody">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
       </div>
     </main>
@@ -159,8 +152,9 @@
 
   <script src="/js/adminlte.js"></script>
 
-  <script type="module" src="/js/admin.js"></script>
+  <script type="module" src="/js/doctors.js"></script>
 
 </body>
 
 
+</html>
