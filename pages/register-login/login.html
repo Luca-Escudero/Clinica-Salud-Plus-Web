@@ -66,15 +66,18 @@
       <div class="card">
         <div class="card-body login-card-body">
           <p class="login-box-msg">Iniciá sesión para comenzar</p>
-          <form action=".../index.html" method="post">
+          <form id="loginForm" method="post">
             <div class="input-group mb-3">
-              <input type="email" class="form-control" placeholder="Email" />
+              <input id="email" type="email" class="form-control" placeholder="Email" />
               <div class="input-group-text"><span class="bi bi-envelope"></span></div>
             </div>
             <div class="input-group mb-3">
-              <input type="password" class="form-control" placeholder="Contraseña" />
+              <input id="password" type="password" class="form-control" placeholder="Contraseña" />
               <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
             </div>
+
+            <div id="error" class="text-danger my-2" style="display:none;"></div>
+
             <!--begin::Row-->
             <div class="row">
               <div class="col-8">
@@ -118,9 +121,12 @@
       crossorigin="anonymous"
     ></script>
     <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
-    <script src="/js/adminlte.js"></script>
-    
+
+    <!-- REVISAR ESTO -->
+    <!-- <script src="/js/adminlte.js"></script> -->
+    <!-- REVISAR ESTO -->
+
+    <script type="module" src="../js/login.js"></script>
   </body>
   <!--end::Body-->
 </html>
-
