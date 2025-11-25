@@ -1,6 +1,6 @@
 // Manejo del formulario de registro
 console.log('[register.js] módulo cargado');
-import { registerUser } from "./auth.js";
+import { registerUser } from "../services/usersService.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('registerForm');
@@ -98,12 +98,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setLoading(true);
         try {
-            const nombre = fullname.value.trim();
-            const mail = email.value.trim();
-            const pwd = password.value;
+            const userData = {
+              fullname: fullname.value.trim(),
+              email: email.value.trim(),
+              password: password.value,
+            };
 
-            // Usa la función del módulo auth.js (registerUser)
-            const newUser = await registerUser(nombre, mail, pwd);
+            // Usa la función del módulo usersService.js
+            await registerUser(userData);
 
             showAlert('Registro exitoso. Redirigiendo al login...', 'success');
             // Mantengo redirección al login.html como antes
