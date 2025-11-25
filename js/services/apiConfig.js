@@ -1,5 +1,5 @@
-const url_UD = "https://api.mockanapi.com/v1/tu-projecto-id"; //editar esto
-const url_AP = "https://api.mockanapi.com/v1/tu-projecto-id"; //editar esto
+const url_UD = "https://6913ae6ef34a2ff1170cdbba.mockapi.io/api/TpiProg3"; 
+const url_AP = "https://6913ae6ef34a2ff1170cdbba.mockapi.io/api/TpiProg3";
 
 async function requestUD(path, { method = "GET", body = null, headers = {} } = {}) {
   const url = `${url_UD}${path}`;
@@ -25,7 +25,7 @@ async function requestUD(path, { method = "GET", body = null, headers = {} } = {
     error.data = errorData;
     throw error;
   }
-  // Si es DELETE, mockapi puede devolver 204 sin body
+
   if (response.status === 204) {
     return null;
   }
@@ -56,7 +56,7 @@ async function requestAP(path, { method = "GET", body = null, headers = {} } = {
     error.data = errorData;
     throw error;
   }
-  // Si es DELETE, mockapi puede devolver 204 sin body
+
   if (response.status === 204) {
     return null;
   }

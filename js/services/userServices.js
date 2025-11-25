@@ -1,6 +1,6 @@
-import { apiUD } from "./apiConfig";
+import { apiUD, apiAP } from "./apiConfig.js";
 
-const USERS_PATH = "/users"; //ver esto
+const USERS_PATH = "/users"; 
 
 export async function getAllUsers() {
   return apiUD.get(USERS_PATH);

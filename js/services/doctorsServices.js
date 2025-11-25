@@ -1,6 +1,6 @@
-import { apiUD } from "./apiConfig";
+import { apiUD } from "./apiConfig.js";
 
-const DOCTORS_PATH = "/doctors"; //ver esto
+const DOCTORS_PATH = "/doctors"; 
 
 export async function getAllDoctors() {
   return apiUD.get(DOCTORS_PATH);
