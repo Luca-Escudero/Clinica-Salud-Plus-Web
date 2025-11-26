@@ -1,5 +1,5 @@
 import { getSession, logout } from './modules/auth.js';
-import { getAllAppointments } from './services/appointmentsServices.js';
+import { getAllAppointments } from './services/appointmentsService.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     const user = getSession();

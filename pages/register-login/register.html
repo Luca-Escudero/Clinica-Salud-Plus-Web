@@ -68,7 +68,7 @@
           <p class="register-box-msg">Creá una cuenta como nuevo paciente</p>
 
           <!-- Cambiado: id, action apuntando al endpoint, y prevención del submit nativo -->
-          <form id="registerForm" method="post" action="/api/register" onsubmit="event.preventDefault()">
+          <form id="register-form" method="post" action="/api/register" onsubmit="event.preventDefault()">
             <div class="input-group mb-3">
               <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Nombre Completo" required />
               <div class="input-group-text"><span class="bi bi-person"></span></div>

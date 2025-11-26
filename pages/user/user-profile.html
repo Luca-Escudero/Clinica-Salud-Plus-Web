@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Clínica Salud+ | Perfil de Usuario</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <link rel="preload" href="/css/adminlte.css" as="style" />
+  <link rel="stylesheet" href="/css/adminlte.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    crossorigin="anonymous" />
+    
+  <link rel="stylesheet" href="/css/styles.css" />
+
+</head>
+
+<body class="layout-fixed sidebar-expand-lg sidebar-open bg-body-tertiary">
+  <div class="app-wrapper">
+    <nav class="app-header navbar navbar-expand bg-body">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button">
+              <i class="bi bi-list"></i>
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown user-menu">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              <img src="/assets/img/user1-128x128.jpg" class="user-image rounded-circle shadow"
+                alt="Imagen de Usuario" />
+              <span class="d-none d-md-inline" id="username-display">Usuario</span>
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+              <li class="user-header bg-light text-dark" style="padding: 10px 10px;">
+                <img src="/assets/img/user1-128x128.jpg" class="rounded-circle shadow" alt="Imagen de Usuario"
+                  style="width: 60px; height: 60px; margin-bottom: 5px;" />
+                <p class="mb-0" id="username-display-2">
+                  Usuario
+                </p>
+              </li>
+
+              <li class="user-footer">
+                <div class="d-grid">
+                    <a href="user-profile.html" class="btn btn-default btn-flat">Perfil</a>
+                  <a href="#" class="btn btn-danger w-100" id="logout-button">Cerrar Sesión</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
+      <div class="sidebar-brand">
+        <a href="/index.html" class="brand-link">
+          <img src="/assets/img/logo.png" alt="Logo" class="brand-image opacity-75 shadow" />
+          <span class="brand-text fw-light">Clínica Salud+</span>
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <nav class="mt-2">
+          <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="navigation"
+            aria-label="Main navigation" data-accordion="false" id="navigation">
+
+            <li class="nav-item">
+              <a href="home-user.html" class="nav-link" data-content-id="dashboard-view">
+                <i class="nav-icon bi bi-speedometer2"></i>
+                <p>Dashboard</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="doctors.html" class="nav-link" data-content-id="doctors-view">
+                <i class="nav-icon bi bi-person-badge-fill"></i>
+                <p>Doctores</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="appointments-user.html" class="nav-link" data-content-id="appointments-view">
+                <i class="bi bi-calendar-plus"></i>
+                <p>Nueva Cita</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="my-appointments.html" class="nav-link" data-content-id="appointments-view">
+                <i class="nav-icon bi bi-calendar-check"></i>
+                <p>Mis Citas</p>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    <main class="app-main">
+      <div class="app-content-header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <h3 class="mb-0" id="main-title">Perfil de Usuario</h3>
+          </div>
+        </div>
+      </div>
+      <div class="app-content">
+        <div class="container-fluid" id="profile-content-container">
+          <div class="card card-primary card-outline">
+            <div class="card-body box-profile">
+              <div class="text-center">
+                <img class="profile-user-img img-fluid img-circle" src="/assets/img/user1-128x128.jpg"
+                  alt="User profile picture">
+              </div>
+              <h3 class="profile-username text-center" id="profile-username"></h3>
+              <p class="text-muted text-center" id="profile-email"></p>
+              <div class="d-grid gap-2">
+                <a href="home-user.html" id="edit-profile-button" class="btn btn-primary">Volver Atrás</a>
+                <a href="#" class="btn btn-danger" id="logout-button-2"><b>Cerrar Sesión</b></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="/js/adminlte.js"></script>
+  <script type="module" src="/js/user-profile.js"></script>
+</body>
+</html>
