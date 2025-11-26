@@ -1,4 +1,4 @@
-import {apiAP} from "./apiConfig";
+import {apiAP} from "./apiConfig.js";
 
 const APPOINTMENTS_PATH = "/appointments";
 

@@ -1,4 +1,4 @@
-import { apiUD } from "./apiConfig";
+import { apiUD } from "./apiConfig.js";
 
 const DOCTORS_PATH = "/doctors";
 
