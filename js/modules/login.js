@@ -1,5 +1,4 @@
-// Archivo: js/login.js
-console.log('[login.js] módulo cargado'); // <-- agrega esto para confirmar carga del módulo
+console.log('[login.js] módulo cargado');
 import { loginUser, redirectToDashboard } from "./auth.js";
 
 document.addEventListener('DOMContentLoaded', () => {
