@@ -1,6 +1,6 @@
-import { getUser, logout } from './modules/auth.js';
-import { getDoctors } from './services/doctorsService.js';
-import { addAppointment } from './services/appointmentsService.js';
+import { getUser, logout } from '../modules/auth.js';
+import { getDoctors } from '../services/doctorsService.js';
+import { addAppointment } from '../services/appointmentsService.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const user = getUser();
