@@ -36,12 +36,17 @@ formLogin.addEventListener("submit", async (event) => {
     // Guardamos sesión en localStorage
     localStorage.setItem("userLogged", JSON.stringify(userFound));
 
-    // Redirección según rol
+    // Redirección según rol 
     if (userFound.role === "admin") {
-      window.location.href = "home-admin.html";
+      window.location.replace("/pages/admin/home-admin.html");
+    } else if (userFound.role === "user") {
+      window.location.replace("/pages/user/home-user.html");
     } else {
-      window.location.href = "home-user.html";
-    }
+      // Rol desconocido: volver al login o mostrar mensaje
+      alert("Rol de usuario no reconocido.");
+      localStorage.removeItem("userLogged");
+      window.location.replace("./login.html");
+    }
 
   } catch (error) {
     console.error(error);
