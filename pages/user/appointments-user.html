@@ -38,16 +38,16 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img src="/assets/img/user1-128x128.jpg" class="user-image rounded-circle shadow"
                                 alt="Imagen de Usuario" />
-                            <span class="d-none d-md-inline">Usuario</span>
+                            <span class="d-none d-md-inline" id="navbar-user-name">Usuario</span>
                         </a>
 
                         <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                             <li class="user-header bg-light text-dark" style="padding: 10px 10px;">
                                 <img src="/assets/img/user1-128x128.jpg" class="rounded-circle shadow"
                                     alt="Imagen de Usuario" style="width: 60px; height: 60px; margin-bottom: 5px;" />
-                                <p class="mb-0">
-                                    Usuario
-                                </p>
+                                <p class="mb-0" id="dropdown-user-name">
+                                                      Usuario
+                                                    </p>
                             </li>
 
                             <li class="user-footer">
@@ -116,6 +116,7 @@
                             <h3 class="mb-0" id="main-title">Solicitar Nueva Cita</h3>
                         </div>
                     </div>
+                    <div id="alert-container"></div>
                 </div>
             </div>
 
@@ -160,7 +161,8 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.min.js"
         integrity="sha256-+vh8GkaU7C9/wbSLIcwq82tQ2wTf44aOHA8HlBMwRI8=" crossorigin="anonymous"></script>
 
-    <script type="module" src="/js/appointments.js"></script>
+    <script type="module" src="/js/user/appointments.js"></script>
+    <script type="module" src="/js/modules/init.js"></script>
 
 </body>
 
