@@ -1,14 +1,23 @@
-export function getAppointments() {
-    return JSON.parse(localStorage.getItem('appointments')) || [];
+import {apiAP} from "./apiConfig.js";
+
+const APPOINTMENTS_PATH = "/appointments";
+
+export async function getAllAppointments() {
+  return apiAP.get(APPOINTMENTS_PATH);
 }
 
-export function addAppointment(appointment) {
-    const appointments = getAppointments();
-    appointments.push({ id: Date.now().toString(), ...appointment });
-    localStorage.setItem('appointments', JSON.stringify(appointments));
+export async function getAppointmentById(id) {
+  return apiAP.get(`${APPOINTMENTS_PATH}/${id}`);
 }
 
-export function getAppointmentsByUser(userId) {
-    const appointments = getAppointments();
-    return appointments.filter(a => a.userId === userId);
+export async function createAppointment({ patientId, doctorId, fecha, hora, estado }) {
+  return apiAP.post(APPOINTMENTS_PATH, { patientId, doctorId, fecha, hora, estado });
+}
+
+export async function updateAppointment(id, { patientId, doctorId, fecha, hora, estado }) {
+  return apiAP.put(`${APPOINTMENTS_PATH}/${id}`, { patientId, doctorId, fecha, hora, estado });
+}
+
+export async function deleteAppointment(id) {
+  return apiAP.delete(`${APPOINTMENTS_PATH}/${id}`);
 }

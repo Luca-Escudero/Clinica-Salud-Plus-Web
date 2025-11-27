@@ -1,46 +1,23 @@
-import { apiAP } from "./apiConfig.js";
+import { apiUD } from "./apiConfig.js";
 
 const DOCTORS_PATH = "/doctors";
 
-/**
- * Obtiene todos los doctores desde la API.
- * @returns {Promise<Array>}
- */
-export async function getDoctors() {
-  try {
-    return await apiAP.get(DOCTORS_PATH);
-  } catch (error) {
-    console.error("Error en getDoctors:", error);
-    throw error;
-  }
+export async function getAllDoctors() {
+  return apiUD.get(DOCTORS_PATH);
 }
 
-/**
- * Agrega un nuevo doctor a la API.
- * @param {object} doctorData - Datos del doctor (nombre, especialidad).
- * @returns {Promise<object>} - La respuesta de la API.
- */
-export async function addDoctor(doctorData) {
-  try {
-    const data = await apiAP.post(DOCTORS_PATH, doctorData);
-    return data;
-  } catch (error) {
-    console.error("Error en addDoctor:", error);
-    throw error;
-  }
+export async function getDoctorById(id) {
+  return apiUD.get(`${DOCTORS_PATH}/${id}`);
 }
 
-/**
- * Elimina un doctor de la API.
- * @param {string} doctorId - ID del doctor a eliminar.
- * @returns {Promise<object>} - La respuesta de la API.
- */
-export async function deleteDoctor(doctorId) {
-  try {
-    const data = await apiAP.delete(`${DOCTORS_PATH}/${doctorId}`);
-    return data;
-  } catch (error) {
-    console.error("Error en deleteDoctor:", error);
-    throw error;
-  }
+export async function createDoctor({ nombre, especialidad, diasDisponibles }) {
+  return apiUD.post(DOCTORS_PATH, { nombre, especialidad, diasDisponibles });
+}
+
+export async function updateDoctor(id, { nombre, especialidad, diasDisponibles }) {
+  return apiUD.put(`${DOCTORS_PATH}/${id}`, { nombre, especialidad, diasDisponibles });
+}
+
+export async function deleteDoctor(id) {
+  return apiUD.delete(`${DOCTORS_PATH}/${id}`);
 }

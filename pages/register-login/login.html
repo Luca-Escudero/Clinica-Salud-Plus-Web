@@ -68,16 +68,18 @@
           <p class="login-box-msg">Inicia sesión para gestionar tus turnos</p>
 
 
-          <form id="login-form" method="post" action="/api/login" onsubmit="event.preventDefault()">
+          <form id="form-login" method="post" action="/api/login" onsubmit="event.preventDefault()">
             <div class="input-group mb-3">
-              <input type="email" id="log-email" name="email" class="form-control" placeholder="Email" required />
+              <input type="email" id="email" name="email" class="form-control" placeholder="Email" required />
               <div class="input-group-text"><span class="bi bi-envelope"></span></div>
             </div>
 
             <div class="input-group mb-3">
-              <input type="password" id="log-password" name="password" class="form-control" placeholder="Contraseña" required />
+              <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña" required />
               <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
             </div>
+
+            <div id="error" class="text-danger my-2" style="display:none;"></div>
 
             <div class="row">
               <div class="col-12 d-flex justify-content-center">
@@ -97,7 +99,7 @@
 
     <!-- Scripts -->
     <script src="/js/adminlte.js"></script>
-    <script type="module" src="/js/modules/login.js"></script>
+    <script type="module" src="/js/login.js"></script>
   </body>
 </html>
 
