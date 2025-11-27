@@ -14,7 +14,6 @@ export function showAlert(message, type) {
             alert.remove();
         }, 5000);
     } else {
-        // Fallback to native alert if container is not found
         alert(message);
     }
 }

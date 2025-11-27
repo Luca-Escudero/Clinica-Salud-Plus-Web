@@ -11,8 +11,10 @@
 
   <link rel="preload" href="/css/adminlte.css" as="style" />
   <link rel="stylesheet" href="/css/adminlte.css" />
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40B7rT/P5wK/tL45jDAB5A9aU6W5jPz5KzFwA3X4wLhCqg0F2gT8k6/A7eB9/j6R6O2xKxO6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40B7rT/P5wK/tL45jDAB5A9aU6W5jPz5KzFwA3X4wLhCqg0F2gT8k6/A7eB9/j6R6O2xKxO6g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.css"
@@ -39,22 +41,23 @@
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
               <img src="/assets/img/user1-128x128.jpg" class="user-image rounded-circle shadow"
                 alt="Imagen de Usuario" />
-              <span class="d-none d-md-inline">Usuario</span>
+              <span class="d-none d-md-inline" id="navbar-user-name">Usuario</span>
             </a>
 
             <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
               <li class="user-header bg-light text-dark" style="padding: 10px 10px;">
                 <img src="/assets/img/user1-128x128.jpg" class="rounded-circle shadow" alt="Imagen de Usuario"
                   style="width: 60px; height: 60px; margin-bottom: 5px;" />
-                <p class="mb-0">
-                  Usuario
-                </p>
+                <p class="mb-0" id="dropdown-user-name">
+                                    Usuario
+                                  </p>
               </li>
 
               <li class="user-footer">
                 <div class="d-grid">
-                    <a href="user-profile.html" class="btn btn-default btn-flat">Perfil</a>
-                  <a href="/pages/register-login/login.html" class="btn btn-danger w-100" id="logout-button">Cerrar Sesión</a>
+                  <a href="user-profile.html" class="btn btn-default btn-flat">Perfil</a>
+                  <a href="/pages/register-login/login.html" class="btn btn-danger w-100" id="logout-button">Cerrar
+                    Sesión</a>
                 </div>
               </li>
             </ul>
@@ -118,31 +121,31 @@
       <div class="app-content">
         <div class="container-fluid" id="user-content-container">
 
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Doctores</h3>
-                </div>
-                
-                <div class="card-body p-0">
-
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th style="width: 40%;">Nombre</th>
-                                <th style="width: 40%;">Especialidad</th>
-                                <th style="width: 20%;">Días Disponibles</th>
-                            </tr>
-                        </thead>
-                        <tbody id="doctorsTableBody">
-                            
-                        </tbody>
-                    </table>
-                </div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Doctores</h3>
             </div>
+
+            <div class="card-body p-0">
+
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 40%;">Nombre</th>
+                    <th style="width: 40%;">Especialidad</th>
+                    <th style="width: 20%;">Días Disponibles</th>
+                  </tr>
+                </thead>
+                <tbody id="doctorsTableBody">
+
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </main>
-      </div>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
@@ -153,6 +156,7 @@
   <script src="/js/adminlte.js"></script>
 
   <script type="module" src="/js/user/doctors.js"></script>
+  <script type="module" src="/js/modules/init.js"></script>
 
 </body>
 

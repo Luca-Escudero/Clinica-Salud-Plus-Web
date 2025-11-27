@@ -35,16 +35,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const fecha = document.getElementById('fecha-cita').value;
         const hora = horaCitaSelect.value;
 
-        // 1. Obtener la sesión del usuario
+        // Obtener la sesión del usuario
         const user = getSession(); // Obtiene el objeto completo del usuario en sesión
 
-        // 2. Validar que el usuario esté logeado
+        // Validar que el usuario esté logeado
         if (!user || !user.id) {
             showAlert('Error: No se encontró la sesión del paciente. Por favor, inicie sesión.', 'danger');
             return; 
         }
 
-        // 3. Asignar el ID real
+        // Asignar el ID real
         const patientId = user.id; 
         const estado = 'pendiente';
 
